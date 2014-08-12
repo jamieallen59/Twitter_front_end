@@ -1,0 +1,109 @@
+<!DoCTYPE html>
+<html>
+<head>
+	<title>Twitter</title>
+	<link rel='stylesheet' type='text/css' href='reset.css'>
+	<link rel='stylesheet' type='text/css' href='twitter.css'>
+	<link rel="icon" type="image/ico" href="images/Twitter_logo_blue.png">
+</head>
+
+<body>
+	<div class='navigation-bar'>
+		<div class='navigation-inner'>
+			<div class='nav-container'>
+				<ul class='nav'>
+					<li><a id='home-button' class='nav' href='#'><img class='nav-logo' src='images/home.png'>Home</a></li>
+					<li><a class='nav' href='#'><img class='nav-logo' src='images/notifications.png'>Notifications</a></li>
+					<li><a class='nav' href='#'><img class='nav-logo' src='images/discover.png'>Discover</a></li>
+					<li><a class='nav' href='#'><img class='nav-logo' src='images/me.png'>Me</a></li>
+					<img id='central-logo' src='images/central_logo.png'>
+				</ul>
+
+				 <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
+				<script>
+					$(document).ready(function() {
+						$('input').on('click', function() {
+							$('div.search-bar').css('background-color', '#66757f');
+							$('div.search-bar').css('transition', 'all .15s ease-in-out');
+							$('input').css('background-color', '#66757f');
+							$('input').css('transition', 'all .15s ease-in-out');
+							// $('input').off('click', function() {
+							// 	$('div.search-bar').css('background-color', '#8899a6');});
+							// 	$('input').css('transition', 'all .25s ease-in-out');
+						});
+					});
+
+				</script>
+				<section class='search-bar'>
+					<div class='search-bar'>
+							<input id='search-input' type='text' name='search' placeholder='Search Twitter'>
+							<img id='search-icon' src='images/search_icon.png'>
+					</div>
+				</section>
+
+				<ul class='options'>
+					<li id='direct-messages'><img class='direct-mail-right' src='images/direct_mail.png'></li>
+					<li id='direct-messages'><img class='settings-right' src='images/settings.png'></li>
+					<li id='direct-messages'><img class='compose-right' src='images/compose.png'></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class='main-container'>
+		<div class='dashboard-left-side'>
+			<div class='profile-display'>
+				<a class='profile-background-image'></a>
+				<div class='profile-information'>
+				</div>
+			</div>
+			<div class='who-to-follow'>
+			</div>
+			<div class='trends'>
+			</div>
+			<div class='info-links'>
+				<ul id='info-links'>
+					<li class='info-link'>2014 Twitter</li>
+					<li class='info-link'>About</li>
+					<li class='info-link'>Help</li>
+					<li class='info-link'>Terms</li>
+					<li class='info-link'>Privacy</li>
+					<li class='info-link'>Cookies</li>
+					<li class='info-link'>Ads info</li>
+					<li class='info-link'>Brand</li>
+					<li class='info-link'>Blog</li>
+					<li class='info-link'>Status</li>
+					<li class='info-link'>Apps</li>
+					<li class='info-link'>Jobs</li>
+					<li class='info-link'>Advertise</li>
+					<li class='info-link'>Business</li>
+					<li class='info-link'>Media</li>
+					<li class='info-link'>Developers</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class='dashboard-middle'>
+			<div class='table-header'>Tweets</div>
+				<ul class='tweet-display'>
+					<li class='tweet-information'>
+						<h1>This is my Twitter</h1>
+						<p>Lorem ipsum whatever the hell you wanna say here!@@W@:E{@:E}</p>
+					</li>
+					<li class='tweet-information'>
+						<h1>This is another tweet</h1>
+						<p>Lorem ipsum whatever the hell you wanna say here! Number 2</p>
+					</li>
+					<li class='tweet-information'>
+						<h1>and another</h1>
+						<p>Lorem ipsum whatever the hell you wanna say here! Number 3</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+</body>
+
+</html>

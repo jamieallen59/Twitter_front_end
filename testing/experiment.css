@@ -1,0 +1,65 @@
+body {
+	font-family: sans-serif, Arial;
+	color: #292f33;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+/*----- Navigation Bar ---------*/
+nav.navigation-bar {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+}
+
+	.navigation-inner {
+		background: #ffffff;
+		height: 46px;
+	}
+
+	.container{
+		min-width: 590px;
+		max-width: 890px;
+		text-align: center;
+		width: auto;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	h1.central-icon {
+		display: inline-block;
+		width: 24px;
+		height: 21px;
+		color: #55acee;
+		font-size:21px;
+		margin-top: 14px;
+		margin-left: -24px;
+		transition: all .25s ease-in-out;
+		background-position: -40px 0;
+	}
+
+ul {
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+}
+.nav {
+	margin-right: 12px;
+	text-align: left;
+}
+.nav > li {
+	color: #66757f;
+}
+
+.nav li {
+	position: relative;
+}
+	.nav.options-left {
+		float: left;
+}
+
+#global-actions > li {
+	height: 46px;
+	overflow: hidden;
+}
