@@ -22,11 +22,11 @@
 				 <script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
 				<script>
 					$(document).ready(function() {
-						$('input').on('click', function() {
+						$('input#search-input').on('click', function() {
 							$('div.search-bar').css('background-color', '#66757f');
 							$('div.search-bar').css('transition', 'all .15s ease-in-out');
-							$('input').css('background-color', '#66757f');
-							$('input').css('transition', 'all .15s ease-in-out');
+							$('input#search-input ').css('background-color', '#66757f');
+							$('input#search-input ').css('transition', 'all .15s ease-in-out');
 							// $('input').off('click', function() {
 							// 	$('div.search-bar').css('background-color', '#8899a6');});
 							// 	$('input').css('transition', 'all .25s ease-in-out');
@@ -50,14 +50,29 @@
 			</div>
 		</div>
 	</div>
+
 	
 	<div class='main-container'>
 		<div class='dashboard-left-side'>
+
 			<div class='profile-display'>
-				<a class='profile-background-image'></a>
-				<div class='profile-information'>
+				<a class='profile-background-image'><img class='profile-banner-image' src='images/calvin.png'></a>
+				<div class='profile-username'>
+					<div class='user-logo'><img class='user-logo' src='images/userlogo.png'></div>
+					<div class='user-name'>Jamie Allen</div>
+					<div class='user-handle'>@JamieAllen59</div>
+				</div>
+
+				<div class='profile-followers'>
+					<div class='profile-followers-headings'>TWEETS FOLLOWING FOLLOWERS</div>
+					<div class='profile-followers-numbers'>11 245 16</div>
+				</div>
+
+				<div class='profile-compose-tweet'>
+					<input id='compose-tweet' type='text' name='tweet' placeholder='Compose new Tweet...'>
 				</div>
 			</div>
+
 			<div class='who-to-follow'>
 			</div>
 			<div class='trends'>

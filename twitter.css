@@ -93,23 +93,20 @@ div.search-bar {
 	height: 25px;
 	border-radius: 25px;
 }
-/*div.search-bar:focus ~ input {
-	background-color: #66757f;
-	transition: all .25s ease-in-out;
-}*/
 
-::-webkit-input-placeholder {
+
+::-webkit-input-placeholder#search-input {
 	color: #ccd6dd;
-	font-size: 12px;§
+	font-size: 12px;
 	font-weight: 100;
 }
-input[type='text'] {
+input#search-input {
 	background-color: #8899a6;
 	border: none;
 	color: white;
 	padding-bottom: 5px;
 }
-input:focus {
+input:focus#search-input {
 	outline-width: 0;
 }
 img#search-icon {
@@ -173,30 +170,103 @@ div.main-container {
 		margin-top: 55px;
 		margin-left: 114px;
 	}
-	.profile-display {
-		display: flex;
-		background-color: #FFF;
-		width: 290px;
-		height: 254px;
-		border: 1px solid #E1E8ED;
-		border-radius: 6px;
-		margin-bottom: 10px;
-	}
+	/*------ Profile information container -----*/
+.profile-display {
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	width: 290px;
+	height: 254px;
+	border: 1px solid #E1E8ED;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
 	.profile-background-image {
+		display: flex;
 		height: 96px;
 		width: 290px;
 		border-bottom: 1px solid #E1E8ED;
 	}
+		img.profile-banner-image {
+			width: 186px;
+			height: 96px;
+			margin-left: 93px;
+		}
 
-	.who-to-follow {
+	.profile-username {
 		display: flex;
-		width: 290px;
-		height: 305px;
-		background-color: #FFF;
-		border: 1px solid #E1E8ED;
-		border-radius: 6px;
-		margin-bottom: 10px;
+		height: 58px;
 	}
+		.user-logo {
+			height: 74px;
+			border-radius: 5px;
+			margin-left: 5px;
+			margin-top: -16px;
+		}
+		.user-name {
+			margin-left: 8px;
+			margin-top: 7px;
+			font-size: 19px;
+			position: absolute;
+		}
+		.user-handle {
+			margin-top: 26px;
+			margin-left: 11px;
+			font-size: 12px;
+			color: #66757f;
+			font-weight: 100;
+		}
+	.profile-followers {
+		display: flex;
+		height: 46px;
+	}
+		div.profile-followers-headings {
+			position: absolute;
+			font-size: 11px;
+			padding-left: 18px;
+			word-spacing: 31px;
+			color: #66757f;
+			font-weight: 100;
+		}
+		div.profile-followers-numbers {
+			margin-top: 16px;
+			padding-left: 18px;
+			word-spacing: 53px;
+			font-size: 20px;
+			color: #0084B4;
+			font-weight: 200;
+		}
+
+	.profile-compose-tweet {
+		display: flex;
+		height: 50px;
+		background-color: #E5F2F7;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		border-top: 1px solid #ABD5E5;
+	}
+		input#compose-tweet {
+			margin: auto;
+			height: 57%;
+			width: 87%;
+			border-radius: 3px;
+			border: 1px solid #ABD5E5;
+			font-size: 14px;
+			padding-left: 11px;
+		}
+		input#compose-tweet:focus {
+			outline-width: 0;
+		}
+
+.who-to-follow {
+	display: flex;
+	width: 290px;
+	height: 305px;
+	background-color: #FFF;
+	border: 1px solid #E1E8ED;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
 
 	.trends {
 		display: flex;
