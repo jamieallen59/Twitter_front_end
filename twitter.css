@@ -229,17 +229,17 @@ div.main-container {
 			font-weight: 100;
 		}
 		div.profile-followers-numbers {
-			margin-top: 16px;
+			margin-top: 17px;
 			padding-left: 18px;
 			word-spacing: 53px;
 			font-size: 20px;
 			color: #0084B4;
-			font-weight: 200;
+			font-weight: 300;
 		}
 
 	.profile-compose-tweet {
 		display: flex;
-		height: 50px;
+		height: 53px;
 		background-color: #E5F2F7;
 		border-bottom-left-radius: 6px;
 		border-bottom-right-radius: 6px;
@@ -257,48 +257,157 @@ div.main-container {
 		input#compose-tweet:focus {
 			outline-width: 0;
 		}
-
+/*---- Who To Follow Container ---*/
 .who-to-follow {
 	display: flex;
+	flex-direction: column;
 	width: 290px;
-	height: 305px;
+	height: 293px;
+	background-color: #FFF;
+	border: 1px solid #E1E8ED;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+	section.who-to-follow-upper {
+		display: flex;
+		flex-direction: column;
+		height: 183px;
+		padding: 15px;
+	}
+		.who-to-follow-text-container {
+			display: flex;
+			flex-direction: row;
+			height: 22px;
+			margin-bottom: 10px;
+		}
+			p.who-to-follow-header {
+				display: flex;
+				font-size: 22px;
+				font-weight: 100;
+				color: #66757f;
+			}
+			ul.refresh-view-all {
+				display: flex;
+				font-size: 13px;
+				font-weight: 100;
+				color: #0084B4;
+				padding-top: 3px;
+			}
+				li#refresh {
+					padding-left: 8px;
+				}
+				li#refresh:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+				li#view-all {
+					padding-left: 8px;
+				}
+				li#view-all:hover {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+		.who-to-follow-brand-box {
+			display: flex;
+			height: 52px;
+			margin-top: 10px;
+		}
+			img.brand-1 {
+				height: 75px;
+				margin-top: -18px;
+				margin-left: -6px;
+			}
+			img.brand-2 {
+				height: 79px;
+				margin-top: -9px;
+				margin-left: -6px;
+			}
+
+	section.who-to-follow-lower {
+		display: flex;
+		flex-direction: column;
+		height: 76px;
+		padding: 15px;
+		background-color: #f5f8fa;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-top: 1px solid #e1e8ed;
+	}
+		.gmail-box {
+			display: flex;
+			flex-direction: row;
+			height: 44px;
+			cursor: pointer;
+			margin-top: -3px;
+			margin-bottom: 5px;
+			border-bottom: 1px solid #e1e8ed;
+		}
+			div.gmail-image {
+				margin-top: -3px;
+				margin-left: -3px;
+				margin-right: 5px;
+			}
+			img.gmail-image {
+				height: 41px;
+			}
+
+		section.gmail-box-text {
+		}
+			p.gmail-import-contacts {
+				font-size: 12px;
+				font-weight: 100;
+				color: #8899a6;
+			}
+			p.gmail-find-people {
+				font-weight: bold;
+				font-size: 15px;
+			}
+		.other-address-books-box {
+			display: flex;
+			display: flex;
+			margin-top: 4px;
+			font-weight: 100;
+		}
+			p.other-address-books {
+				color: #0084B4;
+				font-size: 12px;
+				cursor: pointer;
+			}
+			p.other-address-books:hover {
+				text-decoration: underline;
+			}
+/*---- Trends Container ---*/
+.trends {
+	display: flex;
+	width: 290px;
+	height: 240px;
 	background-color: #FFF;
 	border: 1px solid #E1E8ED;
 	border-radius: 6px;
 	margin-bottom: 10px;
 }
 
-	.trends {
-		display: flex;
-		width: 290px;
-		height: 240px;
-		background-color: #FFF;
-		border: 1px solid #E1E8ED;
-		border-radius: 6px;
-		margin-bottom: 10px;
-	}
-
-	.info-links {
-		display: flex;
-		width: 290px;
-		height: 104px;
-		background-color: #FFF;
-		border: 1px solid #E1E8ED;
-		border-radius: 6px;
-		margin-bottom: 10px;
-	}
-	ul#info-links {
-		line-height: 18px;
-		display: block;
-		padding: 15px;
-		font-weight: 100;
-		font-size: 12px;
-	}
-	li.info-link {
-		float: left;
-		padding-right: 8px;
-		color: #8899a6;
-	}
+.info-links {
+	display: flex;
+	width: 290px;
+	height: 104px;
+	background-color: #FFF;
+	border: 1px solid #E1E8ED;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+ul#info-links {
+	line-height: 18px;
+	display: block;
+	padding: 15px;
+	font-weight: 100;
+	font-size: 12px;
+}
+li.info-link {
+	float: left;
+	padding-right: 8px;
+	color: #8899a6;
+}
 
 /*----- Elements Center --------*/
 
@@ -324,10 +433,10 @@ div.main-container {
 		height: 47px;
 		border-bottom: 1px solid #E1E8ED;
 		vertical-align: middle;
-		line-height: 40px;
-		padding-left: 20px;
+		line-height: 47px;
+		padding-left: 13px;
 		font-family: sans-serif;
-		font-size: 18px;
+		font-size: 22px;
 		font-weight: 100;
 		color: #66757f;
 	}
