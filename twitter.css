@@ -288,7 +288,7 @@ div.main-container {
 			}
 			ul.refresh-view-all {
 				display: flex;
-				font-size: 13px;
+				font-size: 12px;
 				font-weight: 100;
 				color: #0084B4;
 				padding-top: 3px;
@@ -382,7 +382,7 @@ div.main-container {
 	display: flex;
 	flex-direction: column;
 	width: 260px;
-	height: 240px;
+	height: 220px;
 	padding: 15px;
 	background-color: #FFF;
 	border: 1px solid #E1E8ED;
@@ -394,6 +394,10 @@ div.main-container {
 		flex-direction: row;
 		height: 22px;
 		margin-bottom: 10px;
+	}
+	.trends-text-container {
+		margin-left: -6px;
+		margin-top: -6px;
 	}
 		p.trends-header {
 			display: flex;
@@ -413,7 +417,6 @@ div.main-container {
 				text-decoration: underline;
 				cursor: pointer;
 			}
-
 
 /*--- Info Links ----*/
 
@@ -437,6 +440,9 @@ section#info-links {
 		float: left;
 		padding-right: 8px;
 		color: #8899a6;
+	}
+	li.info-link:hover {
+		text-decoration: underline;
 	}
 
 /*----- Elements Center --------*/
@@ -471,10 +477,94 @@ section#info-links {
 		color: #66757f;
 	}
 
-	li.tweet-information {
-		display: flex;
-		padding: 10px;
-		border-bottom: 1px solid #E1E8ED;
-	}
+/*--- Individual Tweet Container ---*/
 
+li.tweet-container {
+	display: flex;
+	padding: 9px 12px;
+	border-bottom: 1px solid #E1E8ED;
+	cursor: pointer;
+}
+li.tweet-container:hover {
+	background-color: #f5f8fa
+}
+	img.tweet-logo {
+		height: 52px;
+		width: 76px;
+		margin-top: 7px;
+	}
+	div.tweet-content {
+		margin-left: 11px;
+		display: flex;
+		flex-direction: column;
+	}
+		div.tweet-heading {
+			display: flex;
+			flex-direction: row;
+		}
+			h1.heading-fullname {
+				font-weight: bold;
+				color: #292f33;
+			}
+			h1.heading-fullname:hover {
+				text-decoration: underline;
+				color: #0084B4;
+			}
+			p.heading-username {
+				display: flex;
+				color: #8899a6;
+				margin-left: 5px;
+			}
+			p.heading-post-time {
+				display: flex;
+				margin-left: 5px;
+			}
+			p.heading-post-time:hover {
+				text-decoration: underline;
+				color: #0084B4;
+			}
+
+		div.tweet-body {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		div.tweet-footer {
+			display: flex;
+			flex-direction: row;
+			color: #8899a6;
+			margin-top: 4px;
+		}
+			p.expand {
+				color: #8899a6;
+				font-size: 13px;
+			}
+			p.expand:hover {
+				color: #0084B4;
+				text-decoration: underline;
+			}
+			ul.tweet-actions {
+				display: flex;
+				flex-direction: row;
+				margin-left: 164px;
+				font-size: 13px;
+			}
+			img.action-image {
+				padding-right: 7px;
+				margin-left: 8px;
+				margin-bottom: -3px;
+			}
+			li.tweet-action:hover {
+				text-decoration: underline;
+			}
+			a.more-icon {
+				margin-left: 8px;
+				margin-right: 4px;
+			}
+
+img.loading-image {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
 

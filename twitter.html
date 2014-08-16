@@ -5,6 +5,7 @@
 	<link rel='stylesheet' type='text/css' href='reset.css'>
 	<link rel='stylesheet' type='text/css' href='twitter.css'>
 	<link rel="icon" type="image/ico" href="images/Twitter_logo_blue.png">
+	<meta charset="UTF-8">
 </head>
 
 <body>
@@ -78,8 +79,8 @@
 					<div class='who-to-follow-text-container'>
 						<p class='who-to-follow-header'>Who To Follow</p>
 						<ul class='refresh-view-all'>
-							<li id='refresh'>Refresh</li>
-							<li id='view-all'>View all</li>
+							<li id='refresh'>• Refresh</li>
+							<li id='view-all'>• View all</li>
 						</ul>
 					</div>
 					<div class='who-to-follow-brand-box'>
@@ -105,7 +106,7 @@
 				<div class='trends-headings-container'>
 					<p class='trends-header'>Trends</p>
 					<ul class='refresh-view-all'>
-						<li id='refresh'>Change</li>
+						<li id='refresh'>• Change</li>
 					</ul>
 				</div>
 				<ul class='trends-text-container'>
@@ -146,20 +147,71 @@
 
 		<div class='dashboard-middle'>
 			<div class='table-header'>Tweets</div>
-				<ul class='tweet-display'>
-					<li class='tweet-information'>
-						<h1>This is my Twitter</h1>
-						<p>Lorem ipsum whatever the hell you wanna say here!@@W@:E{@:E}</p>
+				<ul class='tweet-display items'>
+
+
+					<li class='tweet-container'>
+						<img class='tweet-logo' src='images/img-logo.png'>
+						<div class='tweet-content'>
+							<div class='tweet-heading'>
+								<h1 class='heading-fullname'>My recreation of Twitter</h1>
+								<p class='heading-username'>@jamieallen59</p>
+								<p class='heading-post-time'>41m</p>
+							</div>
+							<div class='tweet-body'>
+								<p>Who knew that sucha  seemingly simple webpage required such an extraordinary level of detail to build? #cssiscray</p>
+							</div>
+							<div class='tweet-footer'>
+								<p class='expand'>Expand</p>
+								<ul class='tweet-actions'>
+									<li class='tweet-action'><img class='action-image' src='images/reply_hover.png'>Reply</li>
+									<li class='tweet-action'><img class='action-image' src='images/retweet_hover.png'>Retweet</li>
+									<li class='tweet-action'><img class='action-image' src='images/favorite_hover.png'>Favourite</li>
+									<a class='more-icon'>•••</a>
+									<li class='tweet-action'>More</li>
+								</ul>
+							</div>
+						</div>
 					</li>
-					<li class='tweet-information'>
-						<h1>This is another tweet</h1>
-						<p>Lorem ipsum whatever the hell you wanna say here! Number 2</p>
-					</li>
-					<li class='tweet-information'>
+
+					<li class='tweet-container'>
 						<h1>and another</h1>
 						<p>Lorem ipsum whatever the hell you wanna say here! Number 3</p>
 					</li>
 				</ul>
+				<div id="lastPostsLoader"></div>
+
+
+			<script type="text/javascript">
+				$(document).ready(function(){
+				    function lastAddedLiveFunc()
+				    {
+				    
+				        $('div#lastPostsLoader').html('<img class="loading-image" src="https://abs.twimg.com/a/1407438973/img/t1/spinner-rosetta-gray-32x32.gif"/>');
+				 		
+
+				        $.get("loadmore.php", function(data) {
+				            if (data != "") {
+				                //console.log('add data..');
+				                $(".items").append(data);
+				              }
+				            $('div#lastPostsLoader').empty();
+				        });
+				    };
+				    //lastAddedLiveFunc();
+				    $(window).scroll(function(){
+				 
+				        var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+				        var  scrolltrigger = 0.95;
+				 
+				        if  ((wintop/(docheight-winheight)) > scrolltrigger) {
+				         //console.log('scroll bottom');
+				         lastAddedLiveFunc();
+				        }
+				    });
+				});
+				</script>
+
 			</div>
 		</div>
 
