@@ -6,7 +6,7 @@ body {
 	background-color: #C0DEED;
 	font-size: 14px;
 	line-height: 18px;
-	height: 1000px;
+	height: 1500px;
 }
 
 /*----- Navigation Bar ---------*/
@@ -376,18 +376,48 @@ div.main-container {
 			p.other-address-books:hover {
 				text-decoration: underline;
 			}
+
 /*---- Trends Container ---*/
 .trends {
 	display: flex;
-	width: 290px;
+	flex-direction: column;
+	width: 260px;
 	height: 240px;
+	padding: 15px;
 	background-color: #FFF;
 	border: 1px solid #E1E8ED;
 	border-radius: 6px;
 	margin-bottom: 10px;
-}
+}	
+	.trends-headings-container {
+		display: flex;
+		flex-direction: row;
+		height: 22px;
+		margin-bottom: 10px;
+	}
+		p.trends-header {
+			display: flex;
+			font-size: 22px;
+			font-weight: 100;
+			color: #66757f;
+		}
+		li#trend {
+			display: flex;
+			font-size: 13px;
+			font-weight: 100;
+			color: #0084B4;
+			padding-left: 8px;
+			padding-top: 3px;
+		}
+			li#trend:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
 
-.info-links {
+
+/*--- Info Links ----*/
+
+section#info-links {
 	display: flex;
 	width: 290px;
 	height: 104px;
@@ -396,18 +426,18 @@ div.main-container {
 	border-radius: 6px;
 	margin-bottom: 10px;
 }
-ul#info-links {
-	line-height: 18px;
-	display: block;
-	padding: 15px;
-	font-weight: 100;
-	font-size: 12px;
-}
-li.info-link {
-	float: left;
-	padding-right: 8px;
-	color: #8899a6;
-}
+	ul#info-links {
+		line-height: 18px;
+		display: block;
+		padding: 15px;
+		font-weight: 100;
+		font-size: 12px;
+	}
+	li.info-link {
+		float: left;
+		padding-right: 8px;
+		color: #8899a6;
+	}
 
 /*----- Elements Center --------*/
 
