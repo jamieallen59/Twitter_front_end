@@ -3,7 +3,9 @@
 <head>
 	<title>Twitter</title>
 	<link rel='stylesheet' type='text/css' href='reset.css'>
-	<link rel='stylesheet' type='text/css' href='twitter.css'>
+	<link rel='stylesheet' type='text/css' href='stylesheets/navigation_bar.css'>
+	<link rel='stylesheet' type='text/css' href='stylesheets/sidebar_left.css'>
+	<link rel='stylesheet' type='text/css' href='stylesheets/main.css'>
 	<link rel="icon" type="image/ico" href="images/Twitter_logo_blue.png">
 	<meta charset="UTF-8">
 </head>
@@ -28,13 +30,10 @@
 							$('div.search-bar').css('transition', 'all .15s ease-in-out');
 							$('input#search-input ').css('background-color', '#66757f');
 							$('input#search-input ').css('transition', 'all .15s ease-in-out');
-							// $('input').off('click', function() {
-							// 	$('div.search-bar').css('background-color', '#8899a6');});
-							// 	$('input').css('transition', 'all .25s ease-in-out');
 						});
 					});
-
 				</script>
+
 				<section class='search-bar'>
 					<div class='search-bar'>
 							<input id='search-input' type='text' name='search' placeholder='Search Twitter'>
@@ -56,23 +55,22 @@
 	<div class='main-container'>
 
 		<div class='dashboard-left-side'>
-
 			<div class='profile-display'>
 				<a class='profile-background-image'><img class='profile-banner-image' src='images/calvin.png'></a>
 				<div class='profile-username'>
-					<div class='user-logo'><img class='user-logo' src='images/userlogo.png'></div>
-					<div class='user-name'>Jamie Allen</div>
-					<div class='user-handle'>@JamieAllen59</div>
-				</div>
-
-				<div class='profile-followers'>
-					<div class='profile-followers-headings'>TWEETS FOLLOWING FOLLOWERS</div>
-					<div class='profile-followers-numbers'>11 245 16</div>
-				</div>
-				<div class='profile-compose-tweet'>
-					<input id='compose-tweet' type='text' name='tweet' placeholder='Compose new Tweet...'>
-				</div>
+				<div class='user-logo'><img class='user-logo' src='images/userlogo.png'></div>
+				<div class='user-name'>Jamie Allen</div>
+				<div class='user-handle'>@JamieAllen59</div>
 			</div>
+
+			<div class='profile-followers'>
+				<div class='profile-followers-headings'>TWEETS FOLLOWING FOLLOWERS</div>
+				<div class='profile-followers-numbers'>11 245 16</div>
+			</div>
+			<div class='profile-compose-tweet'>
+				<input id='compose-tweet' type='text' name='tweet' placeholder='Compose new Tweet...'>
+			</div>
+		</div>
 
 			<div class='who-to-follow'>
 				<section class='who-to-follow-upper'>
@@ -91,10 +89,10 @@
 				<section class='who-to-follow-lower'>
 					<div class='gmail-box'>
 						<div class='gmail-image'><img class='gmail-image' src='images/gmail.png'></div>
-							<section class='gmail-box-text'>
-								<p class='gmail-find-people'>Find people you know</p>
-								<p class='gmail-import-contacts'>Import your contacts from Gmail</p>
-							</section>
+						<section class='gmail-box-text'>
+							<p class='gmail-find-people'>Find people you know</p>
+							<p class='gmail-import-contacts'>Import your contacts from Gmail</p>
+						</section>
 					</div>
 					<div class='other-address-books-box'>
 						<p class='other-address-books'>Connect other address books</p>
@@ -149,7 +147,6 @@
 			<div class='table-header'>Tweets</div>
 				<ul class='tweet-display items'>
 
-
 					<li class='tweet-container'>
 						<img class='tweet-logo' src='images/img-logo.png'>
 						<div class='tweet-content'>
@@ -159,7 +156,7 @@
 								<p class='heading-post-time'>41m</p>
 							</div>
 							<div class='tweet-body'>
-								<p>Who knew that sucha  seemingly simple webpage required such an extraordinary level of detail to build? #cssiscray</p>
+								<p>I'm starting to think that the Facebook status update I liked has had absolutely no influence on Government policy at all. #modernman</p>
 							</div>
 							<div class='tweet-footer'>
 								<p class='expand'>Expand</p>
@@ -175,8 +172,32 @@
 					</li>
 
 					<li class='tweet-container'>
-						<h1>and another</h1>
-						<p>Lorem ipsum whatever the hell you wanna say here! Number 3</p>
+						<img class='tweet-logo' src='images/goldfish.png'>
+						<div class='tweet-content'>
+							<div class='tweet-heading'>
+								<h1 class='heading-fullname'>Gallers</h1>
+								<p class='heading-username'>@Donna_Gallers</p>
+								<p class='heading-post-time'>48m</p>
+							</div>
+							<div class='tweet-body'>
+								<p>
+									1. Go to the vets
+									2. Tell them your fish is poorly
+									3. Put a fish finger on the examining table
+									4. Do a sad face
+								</p>
+							</div>
+							<div class='tweet-footer'>
+								<p class='expand'>Expand</p>
+								<ul class='tweet-actions'>
+									<li class='tweet-action'><img class='action-image' src='images/reply_hover.png'>Reply</li>
+									<li class='tweet-action'><img class='action-image' src='images/retweet_hover.png'>Retweet</li>
+									<li class='tweet-action'><img class='action-image' src='images/favorite_hover.png'>Favourite</li>
+									<a class='more-icon'>•••</a>
+									<li class='tweet-action'>More</li>
+								</ul>
+							</div>
+						</div>
 					</li>
 				</ul>
 				<div id="lastPostsLoader"></div>
@@ -188,8 +209,6 @@
 				    {
 				    
 				        $('div#lastPostsLoader').html('<img class="loading-image" src="https://abs.twimg.com/a/1407438973/img/t1/spinner-rosetta-gray-32x32.gif"/>');
-				 		
-
 				        $.get("loadmore.php", function(data) {
 				            if (data != "") {
 				                //console.log('add data..');

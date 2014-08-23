@@ -1,0 +1,142 @@
+<!DoCTYPE html>
+<html>
+<head>
+
+	 <style type="text/css" media="screen">
+    * { margin: auto; }
+    body { margin: 20px 0; background: #abc; color: #111; font-family: Helvetica, Arial, Verdana, 'Lucida Grande', sans-serif; }
+    h1, h3, p { text-align: center; }
+    div.example { padding: 20px; margin: 10px auto; background: #bcd; width: 750px; }
+    div.example h3 { margin-bottom: 10px; }
+    ul, ol { padding: 0; }
+    #list { width: 50px; height: 150px; overflow-y: scroll; }
+    #images { width: 600px; height: 550px; overflow-x: hidden; text-align: center; list-style: none; }
+    .endless_scroll_loader { position: fixed; top: 10px; right: 20px; }
+  </style>
+
+	<script src='https://code.jquery.com/jquery-2.0.3.min.js'></script>
+	<script type="text/javascript" src="js/jquery.endless-scroll.js"></script>
+
+	<script type="text/javascript" charset="utf-8">
+    $(function() {
+      $('#list').endlessScroll({
+        pagesToKeep: 10,
+        fireOnce: false,
+        insertBefore: "#list div:first",
+        insertAfter: "#list div:last",
+        content: function(i, p) {
+          console.log(i, p)
+          return '<li>' + p + '</li>'
+        },
+        ceaseFire: function(i) {
+          if (i >= 10) {
+            return true;
+          }
+        },
+        intervalFrequency: 5
+      });
+
+      $('#images').scrollTop(101);
+      var images = $("ul#images").clone().find("li");
+      $('#images').endlessScroll({
+        pagesToKeep: 5,
+        inflowPixels: 100,
+        fireDelay: 10,
+        content: function(i, p, d) {
+          console.log(i, p, d)
+          return images.eq(Math.floor(Math.random()*8))[0].outerHTML;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+<div class='example'>
+	<ul id="images">
+
+		<li class='tweet-container'>
+			<img class='tweet-logo' src='images/img-logo.png'>
+			<div class='tweet-content'>
+				<div class='tweet-heading'>
+					<h1 class='heading-fullname'>My recreation of Twitter</h1>
+					<p class='heading-username'>@jamieallen59</p>
+					<p class='heading-post-time'>41m</p>
+				</div>
+				<div class='tweet-body'>
+					<p>Who knew that sucha  seemingly simple webpage required such an extraordinary level of detail to build? #cssiscray</p>
+				</div>
+				<div class='tweet-footer'>
+					<p class='expand'>Expand</p>
+					<ul class='tweet-actions'>
+						<li class='tweet-action'><img class='action-image' src='images/reply_hover.png'>Reply</li>
+						<li class='tweet-action'><img class='action-image' src='images/retweet_hover.png'>Retweet</li>
+						<li class='tweet-action'><img class='action-image' src='images/favorite_hover.png'>Favourite</li>
+						<a class='more-icon'>•••</a>
+						<li class='tweet-action'>More</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+
+		<li class='tweet-container'>
+			<img class='tweet-logo' src='images/img-logo.png'>
+			<div class='tweet-content'>
+				<div class='tweet-heading'>
+					<h1 class='heading-fullname'>My recreation of Twitter</h1>
+					<p class='heading-username'>@jamieallen59</p>
+					<p class='heading-post-time'>41m</p>
+				</div>
+				<div class='tweet-body'>
+					<p>Who knew that sucha  seemingly simple webpage required such an extraordinary level of detail to build? #cssiscray</p>
+				</div>
+				<div class='tweet-footer'>
+					<p class='expand'>Expand</p>
+					<ul class='tweet-actions'>
+						<li class='tweet-action'><img class='action-image' src='images/reply_hover.png'>Reply</li>
+						<li class='tweet-action'><img class='action-image' src='images/retweet_hover.png'>Retweet</li>
+						<li class='tweet-action'><img class='action-image' src='images/favorite_hover.png'>Favourite</li>
+						<a class='more-icon'>•••</a>
+						<li class='tweet-action'>More</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+
+		<li class='tweet-container'>
+			<img class='tweet-logo' src='images/img-logo.png'>
+			<div class='tweet-content'>
+				<div class='tweet-heading'>
+					<h1 class='heading-fullname'>My recreation of Twitter</h1>
+					<p class='heading-username'>@jamieallen59</p>
+					<p class='heading-post-time'>41m</p>
+				</div>
+				<div class='tweet-body'>
+					<p>Who knew that sucha  seemingly simple webpage required such an extraordinary level of detail to build? #cssiscray</p>
+				</div>
+				<div class='tweet-footer'>
+					<p class='expand'>Expand</p>
+					<ul class='tweet-actions'>
+						<li class='tweet-action'><img class='action-image' src='images/reply_hover.png'>Reply</li>
+						<li class='tweet-action'><img class='action-image' src='images/retweet_hover.png'>Retweet</li>
+						<li class='tweet-action'><img class='action-image' src='images/favorite_hover.png'>Favourite</li>
+						<a class='more-icon'>•••</a>
+						<li class='tweet-action'>More</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+
+	  
+	  
+	</ul>
+</div>
+
+<li><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Nissan_GT-R_01.JPG/1280px-Nissan_GT-R_01.JPG" width="580" height="360" alt="Pier" /></li>
+
+
+</body>
+
+
+</html>
